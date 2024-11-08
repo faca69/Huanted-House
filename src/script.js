@@ -1,7 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import GUI from "lil-gui";
-import { color } from "three/examples/jsm/nodes/Nodes.js";
 
 /**
  * Base
@@ -24,39 +23,35 @@ scene.fog = fog;
  * Textures
  */
 const textureLoader = new THREE.TextureLoader();
-const doorColorTexture = textureLoader.load("./textures/door/color.jpg");
+const doorColorTexture = textureLoader.load("/textures/door/color.jpg");
 doorColorTexture.colorSpace = THREE.SRGBColorSpace;
-const doorAlphaTexture = textureLoader.load("./textures/door/alpha.jpg");
+const doorAlphaTexture = textureLoader.load("/textures/door/alpha.jpg");
 const doorAmbientOcclusionTexture = textureLoader.load(
-  "./textures/door/ambientOcclusion.jpg"
+  "/textures/door/ambientOcclusion.jpg"
 );
-const doorHeightTexture = textureLoader.load("./textures/door/height.jpg");
-const doorNormalTexture = textureLoader.load("./textures/door/normal.jpg");
-const doorMetalnessTexture = textureLoader.load(
-  "./textures/door/metalness.jpg"
-);
-const doorRoughnessTexture = textureLoader.load(
-  "./textures/door/roughness.jpg"
-);
+const doorHeightTexture = textureLoader.load("/textures/door/height.jpg");
+const doorNormalTexture = textureLoader.load("/textures/door/normal.jpg");
+const doorMetalnessTexture = textureLoader.load("/textures/door/metalness.jpg");
+const doorRoughnessTexture = textureLoader.load("/textures/door/roughness.jpg");
 
-const bricksColorTexture = textureLoader.load("./textures/bricks/color.jpg");
+const bricksColorTexture = textureLoader.load("/textures/bricks/color.jpg");
 bricksColorTexture.colorSpace = THREE.SRGBColorSpace;
 const bricksAmbientOcclusionTexture = textureLoader.load(
-  "./textures/bricks/ambientOcclusion.jpg"
+  "/textures/bricks/ambientOcclusion.jpg"
 );
-const bricksNormalTexture = textureLoader.load("./textures/bricks/normal.jpg");
+const bricksNormalTexture = textureLoader.load("/textures/bricks/normal.jpg");
 const bricksRoughnessTexture = textureLoader.load(
-  "./textures/bricks/roughness.jpg"
+  "/textures/bricks/roughness.jpg"
 );
 
-const grassColorTexture = textureLoader.load("./textures/grass/color.jpg");
+const grassColorTexture = textureLoader.load("/textures/grass/color.jpg");
 grassColorTexture.colorSpace = THREE.SRGBColorSpace;
 const grassAmbientOcclusionTexture = textureLoader.load(
-  "./textures/grass/ambientOcclusion.jpg"
+  "/textures/grass/ambientOcclusion.jpg"
 );
-const grassNormalTexture = textureLoader.load("./textures/grass/normal.jpg");
+const grassNormalTexture = textureLoader.load("/textures/grass/normal.jpg");
 const grassRoughnessTexture = textureLoader.load(
-  "./textures/grass/roughness.jpg"
+  "/textures/grass/roughness.jpg"
 );
 
 grassColorTexture.repeat.set(8, 8);
